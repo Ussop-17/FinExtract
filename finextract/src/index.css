@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-purple: #7C3AED;
+  --color-primary-black: #1F2937;
+  --color-secondary-lavender: #A78BFA;
+  --color-secondary-pale-purple: #F3E8FF;
+  --color-secondary-sky-blue: #38BDF8;
+  --color-secondary-dark-gray: #374151;
+  --color-secondary-light-gray: #E5E7EB;
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-sans: "Montserrat", sans-serif;
+
+  --color-dark-bg: #0F172A;
+  --color-dark-card: #1E293B;
+  --color-dark-text: #F8FAFC;
+  --color-dark-muted: #94A3B8;
+  --color-dark-border: #334155;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-primary-black bg-white transition-colors duration-300;
+  }
+  .dark body {
+    @apply text-dark-text bg-dark-bg;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wide;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #7C3AED 0%, #38BDF8 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #7C3AED 0%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
